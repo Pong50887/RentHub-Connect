@@ -52,7 +52,7 @@ jobs:
      
     - name: Run tests
       run: |
-        pytest --ds=mysite.settings --cov=. --cov-report=xml
+        pytest --reuse-db --ds=mysite.settings --cov=. --cov-report=xml
     - name: Upload results to Codecov
       uses: codecov/codecov-action@v4
       with:
